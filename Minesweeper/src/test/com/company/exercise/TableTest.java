@@ -3,6 +3,7 @@ package com.company.exercise;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.doReturn;
 
 /**
  * Created by judit on 02.06.17.
@@ -38,16 +39,18 @@ class TableTest {
 
     @Test
     void getSizeTest() {
-        Size actual = Size.HIGH;
-        Size result = tableMocked.getSize();
-        assertEquals(actual, result);
+        Size actual = Size.BIG;
+        int actualInt = 30;
+        int result = tableMocked.getSize();
+        assertEquals(actualInt, result);
     }
 
     @Test
     void getLevelTest() {
         Level actual = Level.HIGH;
-        Level result = tableMocked.getLevel();
-        assertEquals(actual, result);
+        int actualInt = 90;
+        int result = tableMocked.getLevel();
+        assertEquals(actualInt, result);
     }
 
 
